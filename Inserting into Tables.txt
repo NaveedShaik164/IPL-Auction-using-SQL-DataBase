@@ -1,0 +1,181 @@
+Inserting into the Tables: 
+==============================================================================================
+Teams table:
+------------- 
+INSERT INTO teams 
+(team_id, team_name, owner_name, purse, slots) 
+VALUES 
+(1,'CSK','India Cements',434000000,9), 
+(2,'MI','Reliance Industries',27500000,5), 
+(3,'RCB','United Spirits',164000000,8), 
+(4,'DC','JSW Group',218000000,5), 
+(5,'KKR','Red Chillies Entertainment',643000000,13), 
+(6,'RR','Emerging Media',160500000,9), 
+(7,'SRH','Sun TV Network',250000000,10), 
+(8,'PBKS','KPH Dream Cricket Pvt Ltd',115000000,4), 
+(9,'GT','CVC Capital Partners',129000000,5), 
+(10,'LSG','RPSG Group',229500000,6);
+ 
+Auction Table: 
+---------------
+INSERT INTO auction 
+(player_id, player_type, team_id, bid_amount, player_name) 
+VALUES 
+(1016,'batsman',1,142000000,'Prashant Veer'), 
+(1017,'batsman',1,142000000,'Kartik Sharma'), 
+(1012,'bowler',1,52000000,'Rahul Chahar'), 
+(1013,'bowler',1,20000000,'Akeal Hosein'), 
+(1014,'batsman',1,75000000,'Pathum Nissanka'), 
+(1018,'batsman',1,30000000,'Tejasvi Singh'), 
+(1005,'wicketkeeper',2,100000000,'Quinton de Kock'), 
+(1026,'batsman',2,9000000,'Ashok Sharma'), 
+(1004,'batsman',3,70000000,'Venkatesh Iyer'), 
+(1009,'bowler',3,20000000,'Jacob Duffy'), 
+(1029,'batsman',3,750000,'Jordan Cox'), 
+(1022,'batsman',3,3000000,'Daksh Kamra'), 
+(1003,'batsman',4,20000000,'David Miller'), 
+(1006,'batsman',4,20000000,'Ben Duckett'), 
+(1015,'allrounder',4,84000000,'Auqib Nabi Dar'), 
+(1014,'batsman',4,40000000,'Pathum Nissanka'), 
+(1000,'allrounder',5,252000000,'Cameron Green'), 
+(1001,'bowler',5,180000000,'Matheesha Pathirana'), 
+(1002,'bowler',5,92000000,'Mustafizur Rahman'), 
+(1007,'batsman',5,200000000,'Finn Allen'), 
+(1008,'allrounder',5,130000000,'Liam Livingstone'), 
+(1019,'batsman',5,3000000,'Kartik Tyagi'), 
+(1020,'batsman',5,3000000,'Prashant Solanki'), 
+(1021,'batsman',5,3000000,'Sarthak Ranjan'), 
+(1022,'batsman',5,3000000,'Daksh Kamra'), 
+(1023,'bowler',5,10000000,'Akash Deep'), 
+(1016,'batsman',5,140000000,'Prashant Veer'), 
+(1011,'bowler',6,72000000,'Ravi Bishnoi'), 
+(1027,'batsman',6,9000000,'Sushant Mishra'), 
+(1028,'batsman',6,3000000,'Yash Raj Punja'), 
+(1008,'allrounder',7,130000000,'Liam Livingstone'), 
+(1015,'allrounder',7,15000000,'Auqib Nabi Dar'), 
+(1026,'batsman',8,3000000,'Ashok Sharma'), 
+(1025,'allrounder',9,86000000,'Josh Inglis'), 
+(1008,'allrounder',9,3000000,'Liam Livingstone'), 
+(1008,'allrounder',10,200000000,'Liam Livingstone'), 
+(1010,'bowler',10,200000000,'Anrich Nortje'), 
+(1025,'allrounder',10,86000000,'Josh Inglis'), 
+(1030,'batsman',NULL,NULL,'Steve Smith'), 
+(1031,'batsman',NULL,NULL,'Devon Conway'), 
+(1032,'bowler',NULL,NULL,'Gus Atkinson'); 
+
+Players Table: 
+---------------
+INSERT INTO players 
+(player_id, player_type, player_name, base_price, country) 
+VALUES 
+(1000,'allrounder','Cameron Green',20000000,'Australia'), 
+(1001,'bowler','Matheesha Pathirana',20000000,'Sri Lanka'), 
+(1002,'bowler','Mustafizur Rahman',20000000,'Bangladesh'), 
+(1003,'batsman','David Miller',20000000,'South Africa'), 
+(1004,'batsman','Venkatesh Iyer',20000000,'India'), 
+(1005,'wicketkeeper','Quinton de Kock',10000000,'South Africa'), 
+(1006,'batsman','Ben Duckett',20000000,'England'), 
+(1007,'batsman','Finn Allen',20000000,'New Zealand'), 
+(1008,'allrounder','Liam Livingstone',20000000,'England'), 
+(1009,'bowler','Jacob Duffy',20000000,'New Zealand'), 
+(1010,'bowler','Anrich Nortje',20000000,'South Africa'), 
+(1011,'bowler','Ravi Bishnoi',20000000,'India'), 
+(1012,'bowler','Rahul Chahar',10000000,'India'), 
+(1013,'bowler','Akeal Hosein',20000000,'West Indies'), 
+(1014,'batsman','Pathum Nissanka',7500000,'Sri Lanka'), 
+(1015,'allrounder','Auqib Nabi Dar',3000000,'India'), 
+(1016,'batsman','Prashant Veer',3000000,'India'), 
+(1017,'batsman','Kartik Sharma',3000000,'India'), 
+(1018,'batsman','Tejasvi Singh',3000000,'India'), 
+(1019,'batsman','Kartik Tyagi',3000000,'India'), 
+(1020,'batsman','Prashant Solanki',3000000,'India'), 
+(1021,'batsman','Sarthak Ranjan',3000000,'India'), 
+(1022,'batsman','Daksh Kamra',3000000,'India'), 
+(1023,'bowler','Akash Deep',10000000,'India'), 
+(1024,'batsman','Aman Rao',3000000,'India'), 
+(1025,'allrounder','Josh Inglis',20000000,'Australia'), 
+(1026,'batsman','Ashok Sharma',4000000,'India'), 
+(1027,'batsman','Sushant Mishra',3000000,'India'), 
+(1028,'batsman','Yash Raj Punja',3000000,'India'), 
+(1029,'batsman','Jordan Cox',750000,'England'), 
+(1030,'batsman','Steve Smith',20000000,'Australia'), 
+(1031,'batsman','Devon Conway',20000000,'New Zealand'), 
+(1032,'bowler','Gus Atkinson',20000000,'England'); 
+
+Team CSK:
+------------ 
+INSERT INTO csk (player_id, bid_amount, player_type) VALUES 
+(1016,142000000,'batsman'), 
+(1017,142000000,'batsman'), 
+(1012,52000000,'bowler'), 
+(1013,20000000,'bowler'), 
+(1014,75000000,'batsman'), 
+(1018,30000000,'batsman'); 
+
+Team MI: 
+----------
+INSERT INTO mi (player_id, bid_amount, player_type) VALUES 
+(1005,100000000,'wicketkeeper'), 
+(1026,9000000,'batsman');
+ 
+Team RR: 
+--------
+INSERT INTO rr (player_id, bid_amount, player_type) VALUES 
+(1011,72000000,'bowler'), 
+(1027,9000000,'batsman'), 
+(1028,3000000,'batsman'); 
+
+Team RCB:
+------------ 
+INSERT INTO rcb (player_id, bid_amount, player_type) VALUES 
+(1004,70000000,'batsman'), 
+(1009,20000000,'bowler'), 
+(1029,750000,'batsman'), 
+(1022,3000000,'batsman');
+ 
+Team DC: 
+---------
+INSERT INTO dc (player_id, bid_amount, player_type) VALUES 
+(1003,20000000,'batsman'), 
+(1006,20000000,'batsman'), 
+(1015,84000000,'allrounder'), 
+(1014,40000000,'batsman');
+ 
+Team KKR:
+--------- 
+INSERT INTO kkr (player_id, bid_amount, player_type) VALUES 
+(1000,252000000,'allrounder'), 
+(1001,180000000,'bowler'), 
+(1002,92000000,'bowler'), 
+(1007,200000000,'batsman'), 
+(1008,130000000,'allrounder'), 
+(1019,3000000,'batsman'), 
+(1020,3000000,'batsman'), 
+(1021,3000000,'batsman'), 
+(1022,3000000,'batsman'), 
+(1023,10000000,'bowler'), 
+(1016,140000000,'batsman');
+ 
+Team SRH:
+----------- 
+INSERT INTO srh (player_id, bid_amount, player_type) VALUES 
+(1008,130000000,'allrounder'), 
+(1015,15000000,'allrounder');
+ 
+Team PBKS: 
+------------
+INSERT INTO pbks (player_id, bid_amount, player_type) VALUES 
+(1026,3000000,'batsman');
+ 
+Team GT: 
+---------
+INSERT INTO gt (player_id, bid_amount, player_type) VALUES 
+(1025,86000000,'allrounder'), 
+(1008,3000000,'allrounder'); 
+
+Team LSG:
+---------- 
+INSERT INTO lsg (player_id, bid_amount, player_type) VALUES 
+(1008,200000000,'allrounder'), 
+(1010,200000000,'bowler'), 
+(1025,86000000,'allrounder');
